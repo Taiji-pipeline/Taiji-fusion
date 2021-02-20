@@ -1,0 +1,64 @@
+name:                Taiji-fusion
+version:             0.1.0
+license:             BSD3
+license-file:        LICENSE
+author:              Kai Zhang
+maintainer:          kai@kzhang.org
+copyright:           (c) 2021 Kai Zhang
+category:            Bio
+build-type:          Simple
+cabal-version:       >=1.10
+
+Flag exe
+  Description: Build executable
+  Default:     False
+
+library
+  ghc-options:         -Wall
+                       -fno-warn-partial-type-signatures
+                       -fno-warn-unticked-promoted-constructors
+  hs-source-dirs:      src
+
+  exposed-modules:     Taiji.Pipeline.Fusion
+                       Taiji.Pipeline.Fusion.Functions
+
+  build-depends:       base >= 4.7 && < 5
+                     , aeson
+                     , binary
+                     , bio-pipelines
+                     , bytestring
+                     , bytestring-lexing
+                     , bio-experiments
+                     , bioinformatics-toolkit >= 0.9.0
+                     , conduit-extra
+                     , clustering
+                     , case-insensitive
+                     , containers
+                     , conduit
+                     , deepseq
+                     , data-default
+                     , data-ordlist
+                     , double-conversion
+                     , filepath
+                     , HsHTSLib >= 1.9.2
+                     , IntervalMap
+                     , jmacro
+                     , mtl
+                     , matrices
+                     , SciFlow >= 0.7.0
+                     , template-haskell
+                     , text
+                     , temporary
+                     , transformers-base
+                     , mwc-random
+                     , singletons >= 2.5
+                     , split
+                     , shelly
+                     , statistics >= 0.15.0.0
+                     , vector
+                     , vector-algorithms
+                     , unordered-containers
+                     , Taiji-utils
+                     , Taiji-scATAC-seq
+                     , Taiji-scRNA-seq
+  default-language:    Haskell2010
